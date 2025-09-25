@@ -249,7 +249,7 @@ option {
 .btn-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     gap: 12px;
     margin-top: 8px;
 }
@@ -304,7 +304,7 @@ option {
 }
 
 .history-list {
-   background-color: #363636;
+    background: linear-gradient(#373737, #1a1a1a);
    padding: 1rem;
    border-radius: 1rem;
     display: flex;
@@ -315,6 +315,18 @@ option {
  display: none;
 }
 
+.container-btn {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: end;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 @media (max-width: 980px) {
     .app { grid-template-columns: 1fr; }
