@@ -1,6 +1,4 @@
 
-
-
 async function TauxDevise() {
 
 
@@ -30,14 +28,8 @@ async function TauxDevise() {
         const rep = await fetch(`https://v6.exchangerate-api.com/v6/8591ff1a7ff214e46bea68ea/latest/${choix}`)
         Base = await rep.json();
         console.log(Base);
-        montant = parseFloat(nombre.value);
-        resultat = montant* Base.conversion_rates[choix2];  
-        resultat = resultat.toFixed(2);
-        resfinal.innerHTML = `<p class="text-center">${resultat} ${choix2}</p>`;    
+        afficher(montant, Base.conversion_rates[choix2], choix2, resfinal)
 
-         if (resultat == null || isNaN(resultat)){
-            resfinal.innerHTML = `<p class="text-center">0.00 ${choix2}</p>`;
-        }
     });
 
      for (let i in data.conversion_rates){
@@ -47,34 +39,48 @@ async function TauxDevise() {
       Fin.addEventListener('change', async (e) => {
         choix2 = e.target.value;
         console.log(Base.conversion_rates[choix2]);
-        montant = parseFloat(nombre.value);
-        resultat = montant* Base.conversion_rates[choix2];  
-        resultat = resultat.toFixed(2);
-        resfinal.innerHTML = `<p class="text-center">${resultat} ${choix2}</p>`;   
-         if (resultat == null || isNaN(resultat)){
-            resfinal.innerHTML = `<p class="text-center">0.00 ${choix2}</p>`;
-        }
-    })
+        afficher(montant, Base.conversion_rates[choix2], choix2, resfinal)
+
+    });
 
 
 
 
      nombre.addEventListener('input', function() {
         montant = parseFloat(nombre.value);
-        resultat = montant* Base.conversion_rates[choix2];
-        resultat = resultat.toFixed(2);
-        console.log(Base.conversion_rates[choix2]);
-        console.log(resultat);
-        resfinal.innerHTML = `<p class="text-center">${resultat} ${choix2}</p>`;
-            if (resultat == null || isNaN(resultat)){
-            resfinal.innerHTML = `<p class="text-center">0.00 ${choix2}</p>`;
-        }
+        afficher(montant, Base.conversion_rates[choix2], choix2, resfinal)
 
     })
 
+    let swap = document.querySelector('.swap');
+    swap.addEventListener ('click', async(e) =>{
+
+        let trade = choix2;
+        choix2 = choix;
+        choix = trade;
+
+        Fin.value = choix2;
+        devise.value = choix;
+
+        const rep = await fetch(`https://v6.exchangerate-api.com/v6/8591ff1a7ff214e46bea68ea/latest/${choix}`)
+        Base = await rep.json();
+
+      afficher(montant, Base.conversion_rates[choix2], choix2, resfinal)
+
+    
+    });
     
        
 }
 
 TauxDevise();
+
+function afficher(montant, taux, deviseAffiche, resfinal){
+    resultat = montant* taux;
+    resultat = resultat.toFixed(2);
+    resfinal.innerHTML = `<p class="text-center">${resultat} ${deviseAffiche}</p>`;
+        if (resultat == null || isNaN(resultat)){
+            resfinal.innerHTML = `<p class="text-center">0.00 ${deviseAffiche}</p>`;
+        }
+}
 
