@@ -81,6 +81,7 @@ body {
     transition: all .25s ease;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 .p {
