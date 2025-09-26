@@ -29,13 +29,13 @@ function enregister(valeurUser, deviseChoisie, deviseChoisie2, resultText) {
 function afficherHistorique() {
     const historique = JSON.parse(localStorage.getItem("historique")) || [];
     const entryDiv = document.querySelector(".history-container");
-    entryDiv.innerHTML = ""; // On vide avant d'ajouter
+    entryDiv.innerHTML = ""; 
     historique.forEach(entry => {
         entryDiv.innerHTML += `
         
             <div class="history-list">
                 <div>
-                    <p>${entry.valeur} ${entry.devise} = ${entry.resultat} ${entry.devise2}</p>
+                    <p>${entry.valeur} ${entry.devise} = ${entry.resultat}</p>
                 </div>
                 <p>${entry.date}</p>
             </div>

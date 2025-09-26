@@ -294,8 +294,9 @@ option {
     max-height: 15rem;
     overflow-x: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 1rem;
+
 }
 
 .history-tab {
