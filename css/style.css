@@ -58,6 +58,14 @@ body {
     backdrop-filter: var(--blur-24);
 }
 
+.sidebar_dark {
+    background-color: white;
+}
+
+.text_dark {
+    color: black;
+}
+
 .brand {
     font-weight: 600;
     letter-spacing: 1px;
@@ -120,6 +128,10 @@ body {
     backdrop-filter: var(--blur-24);
 }
 
+.content_dark {
+    background-color: white;
+}
+
 .topbar {
     display: flex;
     align-items: center;
@@ -160,6 +172,10 @@ body {
     border-radius: var(--radius-28);
     box-shadow: var(--shadow-strong);
     padding: 28px;
+}
+
+.panel_dark {
+    background-color: white;
 }
 
 .panel-header {
@@ -315,6 +331,20 @@ option {
     align-items: center;
     justify-content: space-between;
 }
+
+.history-list_dark {
+    background-color: white !important;
+    color: black;
+       padding: 1rem;
+   border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.history-list_dark .texte {
+    color: black;
+}
+
 ::-webkit-scrollbar {
  display: none;
 }
@@ -343,4 +373,26 @@ input[type=number]::-webkit-outer-spin-button {
 .buton {
     display: flex;
     justify-content: center;
+}
+
+.flex {
+    display: flex;
+    gap : 1rem;
+    cursor: pointer;
+}
+
+svg:hover path {
+    fill : red;
+}
+
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.darkmode {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+
 }
