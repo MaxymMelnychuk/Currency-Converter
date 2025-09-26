@@ -1,4 +1,4 @@
-const submitBtn = document.querySelector(".btn.ghost");
+const submitBtn = document.getElementById("submitBtn");
 const valeur = document.getElementById("amount");
 const resultDiv = document.querySelector(".btn.primary");
 const selectDevise = document.getElementById('from');
@@ -44,8 +44,16 @@ function afficherHistorique() {
     });
 }
 
+const clearBtn = document.getElementById("clearBtn")
 
-
-
+clearBtn.addEventListener("click", function() {
+    console.log("bouton presse")
+    let historique = JSON.parse(localStorage.getItem("historique")) || [];
+    historique = [];
+    localStorage.setItem("historique", JSON.stringify(historique));
+    afficherHistorique();
+})
 
 afficherHistorique();
+
+
