@@ -26,6 +26,18 @@ function enregister(valeurUser, deviseChoisie, deviseChoisie2, resultText) {
 }
 
 
+document.querySelector(".history-container").addEventListener("click", function(e) { 
+    if (e.target.closest(".red-hover")) { 
+        const historyItem = e.target.closest(".history-list"); 
+        const index = historyItem.getAttribute("data-index"); 
+        const historique = JSON.parse(localStorage.getItem("historique")) || []; 
+        historique.splice(index, 1); 
+        localStorage.setItem("historique", JSON.stringify(historique));
+        afficherHistorique();
+
+    }})
+
+
 function afficherHistorique() {
     const historique = JSON.parse(localStorage.getItem("historique")) || [];
     const entryDiv = document.querySelector(".history-container");

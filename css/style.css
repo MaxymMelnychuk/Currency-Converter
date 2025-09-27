@@ -97,11 +97,7 @@ body {
     box-shadow: var(--shadow-soft);
 }
 
-.sidebar-footer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
+
 
 .badge {
     padding: 8px 12px;
@@ -216,6 +212,15 @@ input[type="number"] {
     outline: none;
 }
 
+input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--white-12);
+    background: linear-gradient(180deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.04) 100%);
+    color: var(--text-0);
+    outline: none;
+}
 .row {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -533,4 +538,27 @@ select,
 .btn,
 .swap {
     transition: background 0.4s, color 0.4s, border-color 0.4s;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.red-hover:hover path {
+    fill: red
+      
+.meteo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+.sidebar-footer{
+    display: flex;
+    flex-direction: column;
+    width: 78%;
+    gap:1rem;
+}
+.meteo p{
+    font-size:0.9rem;
 }
