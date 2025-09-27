@@ -544,7 +544,14 @@ select,
 
 .red-hover:hover path {
     fill: red
-      
+}
+
+body.lightmode select,
+body.lightmode option {
+    background: #f5f6fa !important;
+    color: #232a36 !important;
+    border: 1px solid #bfc6d1 !important;
+}
 .meteo{
     display: flex;
     justify-content: flex-start;
