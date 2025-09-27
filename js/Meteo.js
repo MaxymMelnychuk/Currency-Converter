@@ -22,7 +22,7 @@ if ("geolocation" in navigator) {
     Ville =  meteo.name
     console.log(Ville)
 
-    met.innerHTML += `<p>${temperature}°C</p></div>`;
+    met.innerHTML += `<p>${temperature}°C</p>`;
     met.innerHTML += `<img src="https://openweathermap.org/img/wn/${image}.png">`;
 
     })
