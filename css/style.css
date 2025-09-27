@@ -350,6 +350,15 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: center;
 }
 
+.flex {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.red-hover:hover path {
+    fill: red
+      
 .meteo{
     display: flex;
     justify-content: flex-start;
