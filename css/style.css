@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -58,13 +57,7 @@ body {
     backdrop-filter: var(--blur-24);
 }
 
-.sidebar_dark {
-    background-color: white;
-}
 
-.text_dark {
-    color: black;
-}
 
 .brand {
     font-weight: 600;
@@ -128,9 +121,7 @@ body {
     backdrop-filter: var(--blur-24);
 }
 
-.content_dark {
-    background-color: white;
-}
+
 
 .topbar {
     display: flex;
@@ -174,9 +165,7 @@ body {
     padding: 28px;
 }
 
-.panel_dark {
-    background-color: white;
-}
+
 
 .panel-header {
     display: grid;
@@ -332,18 +321,7 @@ option {
     justify-content: space-between;
 }
 
-.history-list_dark {
-    background-color: white !important;
-    color: black;
-       padding: 1rem;
-   border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.history-list_dark .texte {
-    color: black;
-}
+
 
 ::-webkit-scrollbar {
  display: none;
@@ -392,7 +370,167 @@ svg:hover path {
 }
 
 .darkmode {
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+
+
+/* LIGHT MODE  */
+
+body.lightmode {
+    background: linear-gradient(135deg, #e3e6ec 0%, #cfd4dd 100%);
+    color: #232a36;
+    transition: background 0.4s, color 0.4s;
+}
+
+body.lightmode .sidebar {
+    background: linear-gradient(180deg, #e3e6ec 0%, #cfd4dd 100%);
+    border-right: 1px solid #bfc6d1;
+    color: #232a36;
+}
+
+body.lightmode .texte {
+    color: #232a36 !important;
+}
+
+body.lightmode .content {
+    background: linear-gradient(135deg, #e3e6ec 0%, #cfd4dd 100%);
+    color: #232a36;
+}
+
+body.lightmode .topbar {
+    background: none;
+    color: #232a36;
+}
+
+body.lightmode .panel {
+    background: linear-gradient(135deg, #f5f6fa 0%, #e3e6ec 100%);
+    border: 1px solid #bfc6d1;
+    box-shadow: 0 8px 32px rgba(180, 190, 210, 0.12);
+    color: #232a36;
+}
+
+body.lightmode .panel-header {
+    background: none;
+    color: #232a36;
+}
+
+body.lightmode .kpi {
+    background: #e3e6ec;
+    border: 1px solid #bfc6d1;
+    color: #232a36;
+}
+
+body.lightmode .history-list {
+    background: linear-gradient(90deg, #e3e6ec 0%, #cfd4dd 100%) !important;
+    color: #232a36 !important;
+    border: 1px solid #bfc6d1;
+}
+body.lightmode .history-list .texte {
+    color: #232a36 !important;
+}
+
+body.lightmode .history-tab {
+    background: none;
+    color: #232a36;
+}
+body.lightmode .history-tab .menu-item {
+    background: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+body.lightmode .history-tab .menu-item svg path {
+    fill: #bfc6d1 !important; 
+}
+
+body.lightmode .menu-item.active {
+    background: linear-gradient(90deg, #dbe2ea 0%, #e3e6ec 100%);
+    color: #3b6ea5 !important;
+    border-color: #3b6ea5;
+    box-shadow: 0 2px 8px rgba(180, 190, 210, 0.10);
+}
+
+body.lightmode .badge {
+    background: #dbe2ea !important;
+    color: #3b6ea5 !important;
+    border: 1px solid #bfc6d1 !important;
+}
+
+body.lightmode input[type="number"],
+body.lightmode select {
+    background: #f5f6fa !important;
+    color: #232a36 !important;
+    border: 1px solid #bfc6d1 !important;
+}
+
+body.lightmode .btn,
+body.lightmode .btn.primary,
+body.lightmode .btn.ghost {
+    background: #dbe2ea !important;
+    color: #3b6ea5 !important;
+    border: 1px solid #bfc6d1 !important;
+}
+
+body.lightmode .swap {
+    background: #dbe2ea !important;
+    color: #3b6ea5 !important;
+    border: 1px solid #bfc6d1 !important;
+}
+
+body.lightmode .container-btn {
+    background: none;
+    color: #232a36;
+}
+
+body.lightmode .converter label {
+    color: #3b6ea5 !important;
+}
+
+body.lightmode svg path {
+    fill: #3b6ea5 !important;
+}
+
+body.lightmode .darkmode {
+    background-color: rgba(59, 110, 165, 0.08) !important;
+    border: none;
+    color: #3b6ea5 !important;
+}
+
+body.lightmode .menu {
+    background: none;
+    color: #232a36;
+}
+
+body.lightmode .menu-item {
+    color: #3b6ea5;
+    border-color: #bfc6d1;
+    background: #e3e6ec;
+    transition: background 0.4s, color 0.4s;
+}
+
+body.lightmode .menu-item svg path {
+    fill: #3b6ea5 !important;
+}
+
+body,
+.sidebar,
+.content,
+.panel,
+.menu-item,
+.history-list,
+.badge,
+input[type="number"],
+select,
+.btn,
+.swap {
+    transition: background 0.4s, color 0.4s, border-color 0.4s;
 }

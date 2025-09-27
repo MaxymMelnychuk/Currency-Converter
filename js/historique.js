@@ -35,7 +35,7 @@ function afficherHistorique() {
         
            <div class="history-list">
                 <div>
-                    <p class="texte">${entry.valeur} ${entry.devise} = ${entry.resultat} ${entry.devise2}</p>
+                    <p class="texte">${entry.valeur} ${entry.devise} = ${entry.resultat}</p>
                 </div>
                 <div class="flex">
                 <p class="texte">${entry.date}</p>
