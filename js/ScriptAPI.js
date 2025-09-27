@@ -23,7 +23,7 @@ async function TauxDevise() {
 
 
     devise.addEventListener('change', async (e) => {
-        const choix = e.target.value;
+        choix = e.target.value;
         console.log(choix);
         const rep = await fetch(`https://v6.exchangerate-api.com/v6/56a009a66c56973a27f69564/latest/${choix}`)
         Base = await rep.json();
