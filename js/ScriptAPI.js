@@ -8,7 +8,7 @@ async function TauxDevise() {
     let nombre= document.querySelector('#amount');
     let resfinal= document.querySelector('.resultat');
     let montant = parseFloat(nombre.value);
-    const response = await fetch('https://v6.exchangerate-api.com/v6/8591ff1a7ff214e46bea68ea/latest/USD');
+    const response = await fetch('https://v6.exchangerate-api.com/v6/56a009a66c56973a27f69564/latest/USD');
     const data = await response.json();
     console.log(data);
 
@@ -25,7 +25,7 @@ async function TauxDevise() {
     devise.addEventListener('change', async (e) => {
         const choix = e.target.value;
         console.log(choix);
-        const rep = await fetch(`https://v6.exchangerate-api.com/v6/8591ff1a7ff214e46bea68ea/latest/${choix}`)
+        const rep = await fetch(`https://v6.exchangerate-api.com/v6/56a009a66c56973a27f69564/latest/${choix}`)
         Base = await rep.json();
         console.log(Base);
         afficher(montant, Base.conversion_rates[choix2], choix2, resfinal)
@@ -62,7 +62,7 @@ async function TauxDevise() {
         Fin.value = choix2;
         devise.value = choix;
 
-        const rep = await fetch(`https://v6.exchangerate-api.com/v6/8591ff1a7ff214e46bea68ea/latest/${choix}`)
+        const rep = await fetch(`https://v6.exchangerate-api.com/v6/56a009a66c56973a27f69564/latest/${choix}`)
         Base = await rep.json();
 
       afficher(montant, Base.conversion_rates[choix2], choix2, resfinal)
